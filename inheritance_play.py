@@ -31,3 +31,19 @@ class Fern(Plant):
     def local_explain(self):
         print "I have {} fronds".format(self.frond_number)
 
+
+# Inheritnce model with super()
+
+class Tool(object):
+    def __init__(self,*args,**kwargs):
+        self.weight = kwargs['weight']
+    
+    def explain(self):
+        print "I weigh {} lbs".format(self.weight)
+        self.local_explain()
+
+    def local_explain(self):
+        pass
+
+class Hammer(Tool):
+    pass 
